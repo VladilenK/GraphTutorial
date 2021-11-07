@@ -1,0 +1,27 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+
+<!-- <SharePointIndexSnippet> -->
+@model SharePointViewModel
+
+@{
+
+  ViewData["Title"] = "SharePoint";
+}
+
+<div class="sharePoint-week">
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Url</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <partial name="_SitesPartial" for="AllSites" />
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- </SharePointIndexSnippet> -->

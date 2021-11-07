@@ -1,0 +1,41 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved.
+     Licensed under the MIT License. -->
+<!-- <SitesPartialSnippet> -->
+@model SitesViewModel
+
+@{
+  var timeFormat = User.GetUserGraphTimeFormat();
+}
+
+@if (Model.Sites.Count() <= 0)
+{
+
+  // Render an empty row
+  <tr>
+    <td class="calendar-view-date-cell">
+      <div class="calendar-view-date float-left text-right">no sites</div>
+    </td>
+    <td>
+      <div class="calendar-view-day">user is</div>
+      <div class="calendar-view-month text-muted">following to</div>
+    </td>
+  </tr>
+
+}
+
+@foreach (var item in Model.Sites)
+
+{
+  <tr>
+    <td class="calendar-view-timespan">
+      <div class="calendar-view-date-diff">@item.WebUrl</div>
+    </td>
+    <td>
+      <div class="calendar-view-subject">@item.Title</div>
+      <div class="calendar-view-organizer">@item.Description</div>
+      <div class="calendar-view-organizer">@item.Id</div>
+    </td>
+  </tr>
+
+}
+<!-- </SitesPartialSnippet> -->
